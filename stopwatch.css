@@ -1,0 +1,143 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f0f0f0, #a0a0a0);
+    animation: backgroundChange 10s infinite alternate;
+}
+
+@keyframes backgroundChange {
+    0% {
+        background: linear-gradient(135deg, #f0f0f0, #a0a0a0);
+    }
+    15% {
+        background: linear-gradient(135deg, #ffcccc, #e0c70d);
+    }
+    25% {
+        background: linear-gradient(135deg, #ffcccc, #ff9999);
+    }
+    50% {
+        background: linear-gradient(135deg, #ffcccc, #e00707);
+    }
+    75% {
+        background: linear-gradient(135deg, #ffcccc, #0bb20d);
+    }
+    85% {
+        background: linear-gradient(135deg, #ffcccc, #149fda);
+    }
+    100% {
+        background: linear-gradient(135deg, #f0f0f0, #aa0974);
+    }
+}
+
+.stopwatch {
+    text-align: center;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+#display {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #333;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+button {
+    margin: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+    animation: buttonFadeIn 1s ease-in-out;
+}
+
+@keyframes buttonFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+button:hover {
+    background: linear-gradient(135deg, #0056b3, #003d80);
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    transform: scale(0.95);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+#laps {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #666;
+    animation: lapsFadeIn 1s ease-in-out;
+}
+
+@keyframes lapsFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#laps div {
+    padding: 0.5rem 0;
+    animation: lapEntry 0.5s ease-in-out;
+}
+
+@keyframes lapEntry {
+    from {
+        transform: scaleY(0.5);
+        opacity: 0;
+    }
+    to {
+        transform: scaleY(1);
+        opacity: 1;
+    }
+}

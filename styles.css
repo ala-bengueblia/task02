@@ -1,0 +1,72 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f0f0f0, #a0a0a0);
+    animation: backgroundChange 10s infinite alternate;
+}
+
+@keyframes backgroundChange {
+    0% {
+        background: linear-gradient(135deg, #f0f0f0, #a0a0a0);
+    }
+    50% {
+        background: linear-gradient(135deg, #ffcccc, #ff9999);
+    }
+    100% {
+        background: linear-gradient(135deg, #f0f0f0, #a0a0a0);
+    }
+}
+
+.half-circle {
+    width: 200px;
+    height: 100px;
+    background: linear-gradient(90deg, #ff7f50, #ff6347);
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    position: relative;
+    animation: rotateHalfCircle 5s infinite alternate ease-in-out, gradientShift 5s infinite alternate;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+@keyframes rotateHalfCircle {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes backgroundChange {
+    0% {
+        background: linear-gradient(135deg, #f0f0f0, #a0a0a0);
+    }
+    15% {
+        background: linear-gradient(135deg, #ffcccc, #e0c70d);
+    }
+    25% {
+        background: linear-gradient(135deg, #ffcccc, #ff9999);
+    }
+    50% {
+        background: linear-gradient(135deg, #ffcccc, #e00707);
+    }
+    75% {
+        background: linear-gradient(135deg, #ffcccc, #0bb20d);
+    }
+    85% {
+        background: linear-gradient(135deg, #ffcccc, #149fda);
+    }
+    100% {
+        background: linear-gradient(135deg, #f0f0f0, #aa0974);
+    }
+}
+
+.half-circle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
